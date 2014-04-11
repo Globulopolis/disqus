@@ -2,12 +2,12 @@
 <extension version="2.5" type="plugin" group="content" method="upgrade">
 	<name>plg_content_disqus</name>
 	<author>Viper</author>
-	<creationDate>September 2013</creationDate>
+	<creationDate>April 2014</creationDate>
 	<copyright></copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>web@libra.ms</authorEmail>
 	<authorUrl>www.киноархив.com</authorUrl>
-	<version>0.2</version>
+	<version>0.3</version>
 	<description>PLG_CONTENT_DISQUS_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="disqus">disqus.php</filename>
@@ -23,16 +23,27 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="jquery" type="list" default="0" label="PLG_CONTENT_DISQUS_PARAMS_JQ">
-					<option value="0">JNO</option>
+				<field name="jquery" type="radio" default="0" class="btn-group" label="PLG_CONTENT_DISQUS_PARAMS_JQ">
 					<option value="1">JYES</option>
-				</field>
-				<field name="shortname" type="text" default="" size="30" label="PLG_CONTENT_DISQUS_PARAMS_SHORTNAME" description="PLG_CONTENT_DISQUS_PARAMS_SHORTNAME_DESC" required="true" class="span6 required" filter="string" />
-				<field name="selector" type="text" default="article, .items-leading" size="30" label="PLG_CONTENT_DISQUS_PARAMS_SELECTOR" description="PLG_CONTENT_DISQUS_PARAMS_SELECTOR_DESC" required="true" class="span6 required" filter="string" />
-				<field name="counter" type="list" default="0" label="PLG_CONTENT_DISQUS_PARAMS_COUNTER" description="PLG_CONTENT_DISQUS_PARAMS_COUNTER_DESC">
 					<option value="0">JNO</option>
-					<option value="1">JYES</option>
 				</field>
+				<field name="shortname" type="text" default="" size="30" label="PLG_CONTENT_DISQUS_PARAMS_SHORTNAME" description="PLG_CONTENT_DISQUS_PARAMS_SHORTNAME_DESC" required="true" class="inputbox required" filter="string" />
+				<field name="selector" type="text" default="article, .items-leading" size="30" label="PLG_CONTENT_DISQUS_PARAMS_SELECTOR" description="PLG_CONTENT_DISQUS_PARAMS_SELECTOR_DESC" required="true" class="inputbox required" filter="string" />
+				<field name="identifier" type="text" required="true" class="inputbox" default="disqussion" label="PLG_CONTENT_DISQUS_PARAMS_IDENTIFIER" description="PLG_CONTENT_DISQUS_PARAMS_IDENTIFIER_DESC" filter="string" />
+				<field name="counter" type="radio" class="btn-group" default="0" label="PLG_CONTENT_DISQUS_PARAMS_COUNTER" description="PLG_CONTENT_DISQUS_PARAMS_COUNTER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="highlighted" type="radio" class="btn-group" default="0" label="PLG_CONTENT_DISQUS_PARAMS_HIGHLIGHT" description="PLG_CONTENT_DISQUS_PARAMS_HIGHLIGHT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="position" type="list" default="right" label="PLG_CONTENT_DISQUS_PARAMS_POSITION" description="PLG_CONTENT_DISQUS_PARAMS_POSITION_DESC">
+					<option value="right">PLG_CONTENT_DISQUS_RIGHT</option>
+					<option value="left">PLG_CONTENT_DISQUS_LEFT</option>
+				</field>
+				<field name="background" type="text" default="white" class="inputbox" label="PLG_CONTENT_DISQUS_PARAMS_BGCOLOR" description="PLG_CONTENT_DISQUS_PARAMS_BGCOLOR_DESC" filter="string" />
+				<field name="maxwidth" type="text" default="9999" class="inputbox" label="PLG_CONTENT_DISQUS_PARAMS_MAXWIDTH" description="PLG_CONTENT_DISQUS_PARAMS_MAXWIDTH_DESC" filter="integer" />
 			</fieldset>
 		</fields>
 	</config>
